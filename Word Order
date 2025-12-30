@@ -1,0 +1,16 @@
+n = int(input().strip())
+
+word_count = {}
+
+for _ in range(n):
+    word = input().strip()
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+
+# Output number of distinct words
+print(len(word_count))
+
+# Output occurrences in order of first appearance
+print(*word_count.values())
